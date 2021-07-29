@@ -4,7 +4,8 @@
   "description": "Vegan studio project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/gersonomonteiro/veganstudio-backend/issues"
   },
-  "homepage": "https://github.com/gersonomonteiro/veganstudio-backend#readme"
+  "homepage": "https://github.com/gersonomonteiro/veganstudio-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.6",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
+  }
 }
