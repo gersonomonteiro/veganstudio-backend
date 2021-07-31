@@ -1,6 +1,12 @@
 const express = require("express");
+const cors = require("cors");
+
 const contestRouter = require("./src/routes/contest.routes");
 require("./src/database");
+
+var corsOptions = {
+  origin: "http://localhost:4200",
+};
 
 app = express();
 const http = require("http");
@@ -8,6 +14,7 @@ const server = http.Server(app);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //Parse URL-encoded bodies
+app.use(cors(corsOptions));
 
 app.use("/veganstudio", contestRouter);
 
