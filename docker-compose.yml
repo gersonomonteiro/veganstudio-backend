@@ -13,7 +13,7 @@ services:
       - node_modules:/usr/src/app/node_modules
   vegan-studio-frontend:
     container_name: veganstudio-frontend
-    build: ./veganstudio-frontend
+    build: ./veganStudio-frontend
     restart: always
     ports:
       - "4200:4200"
