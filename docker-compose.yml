@@ -9,14 +9,14 @@ services:
     ports:
       - 888:8080
     volumes:
-      - ./veganStudio-backend:/usr/src/app/
+      - ./veganstudio-backend:/usr/src/app/
       - node_modules:/usr/src/app/node_modules
   vegan-studio-frontend:
     container_name: veganstudio-frontend
     build: ./veganStudio-frontend
     restart: always
     ports:
-      - '4200:4200'
+      - "4200:4200"
     environment:
       - NODE_ENV=production
   mysql:
