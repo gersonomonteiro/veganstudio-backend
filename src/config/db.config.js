@@ -1,6 +1,6 @@
 module.exports = {
   username: "root",
-  password: "Pa$$w0rd",
+  password: "root",
   database: "vegan_studio",
   host: "localhost",
   port: "3306",
