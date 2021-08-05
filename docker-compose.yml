@@ -3,13 +3,13 @@ version: "3.1"
 
 services:
   vegan-studio-backend:
-    build: .
+    build: ./veganstudio-backend
     container_name: vegan-studio-backend
     restart: always
     ports:
       - 888:8080
     volumes:
-      - .:/usr/src/app/
+      - ./veganStudio-backend:/usr/src/app/
       - node_modules:/usr/src/app/node_modules
   mysql:
     image: mysql:5.7.19
