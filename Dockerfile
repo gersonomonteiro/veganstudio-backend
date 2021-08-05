@@ -15,5 +15,4 @@ COPY . .
 #USER node
 
 EXPOSE 3000
-ENTRYPOINT [ "./entrypoint.sh" ]
 CMD [ "node", "index.js" ]
