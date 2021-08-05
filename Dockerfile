@@ -10,10 +10,10 @@ RUN npm install
 
 COPY . .
 
-RUN npx sequelize db:migrate
+#RUN npx sequelize db:migrate
 
 #USER node
 
 EXPOSE 3000
-
+CMD [ "npx", "sequelize", "db:migrate" ]
 CMD [ "node", "index.js" ]
