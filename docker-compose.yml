@@ -6,6 +6,7 @@ services:
     build: .
     container_name: vegan-studio-backend
     restart: always
+    entrypoint: ["/bin/bash", "./entrypoint.sh"]
     ports:
       - 888:8080
     volumes:
@@ -21,7 +22,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: vegan_studio
       MYSQL_USER: root
-      entrypoint: ["/bin/bash", "./entrypoint.sh"]
     volumes:
       - vol-mysql:/var/lib/mysql
     command: [--ssl=0]
