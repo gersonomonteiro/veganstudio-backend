@@ -3,7 +3,7 @@ module.exports = {
   password: "root",
   database: "vegan_studio",
   host: "mysql",
-  port: "49159",
+  port: "3306",
   dialect: "mysql",
   pool: {
     max: 5,
