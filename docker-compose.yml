@@ -16,11 +16,13 @@ services:
     container_name: mysql-veganstudio
     restart: unless-stopped
     ports:
-      - 3306
+      - 49159:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: vegan_studio
       MYSQL_USER: root
+    volumes:
+      - vol-mysql:/var/lib/mysql
     command: [--ssl=0]
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-uroot", "-proot"]
@@ -29,3 +31,4 @@ services:
       retries: 5
 volumes:
   node_modules:
+  vol-mysql:
