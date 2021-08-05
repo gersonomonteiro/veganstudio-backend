@@ -7,9 +7,26 @@ services:
     container_name: vegan-studio-backend
     restart: always
     ports:
-      - 8081:8080
+      - 888:8080
     volumes:
       - .:/usr/src/app/
       - node_modules:/usr/src/app/node_modules
+  mysql:
+    image: mysql:5.7.19
+    container_name: mysql-veganstudio
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: Pa$$w0rd
+      MYSQL_DATABASE: vegan_studio
+      MYSQL_USER: root
+    command: [--ssl=0]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-pPa$$w0rd"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
 volumes:
   node_modules:
