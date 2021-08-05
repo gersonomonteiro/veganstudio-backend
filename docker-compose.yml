@@ -21,6 +21,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: vegan_studio
       MYSQL_USER: root
+      entrypoint: ["/bin/bash", "./entrypoint.sh"]
     volumes:
       - vol-mysql:/var/lib/mysql
     command: [--ssl=0]

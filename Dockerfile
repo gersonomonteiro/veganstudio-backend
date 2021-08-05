@@ -10,10 +10,10 @@ RUN npm install
 
 COPY . .
 
-#RUN npx sequelize db:migrate
+#COPY --chown=node:node . .
 
 #USER node
 
 EXPOSE 3000
-CMD [ "npx", "sequelize", "db:migrate" ]
+ENTRYPOINT [ "./entrypoint.sh" ]
 CMD [ "node", "index.js" ]
