@@ -5,7 +5,7 @@ const contestRouter = require("./src/routes/contest.routes");
 require("./src/database");
 
 var corsOptions = {
-  origin: "http://localhost:4200",
+  origin: "http://10.4.9.7:4200",
 };
 
 app = express();
