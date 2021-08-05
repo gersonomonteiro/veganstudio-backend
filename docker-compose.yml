@@ -18,7 +18,7 @@ services:
     ports:
       - 3306
     environment:
-      MYSQL_ROOT_PASSWORD: Pa$$w0rd
+      MYSQL_ROOT_PASSWORD: "Pa$$w0rd"
       MYSQL_DATABASE: vegan_studio
       MYSQL_USER: root
     command: [--ssl=0]
