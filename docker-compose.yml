@@ -10,7 +10,7 @@ services:
     ports:
       - 888:8080
     depends_on:
-      mysql:
+      mysql-pdex:
     volumes:
       - .:/usr/src/app/
       - node_modules:/usr/src/app/node_modules
