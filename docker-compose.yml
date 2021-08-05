@@ -2,18 +2,6 @@
 version: "3.1"
 
 services:
-  vegan-studio-backend:
-    build: .
-    container_name: vegan-studio-backend
-    restart: always
-    entrypoint: ["/bin/bash", "./entrypoint.sh"]
-    ports:
-      - 888:8080
-    depends_on:
-      mysql-pdex:
-    volumes:
-      - .:/usr/src/app/
-      - node_modules:/usr/src/app/node_modules
   mysql:
     image: mysql:5.7.19
     container_name: mysql-veganstudio
@@ -32,6 +20,16 @@ services:
       interval: 30s
       timeout: 60s
       retries: 5
+  vegan-studio-backend:
+    build: .
+    container_name: vegan-studio-backend
+    restart: always
+    entrypoint: ["/bin/bash", "./entrypoint.sh"]
+    ports:
+      - 888:8080
+    volumes:
+      - .:/usr/src/app/
+      - node_modules:/usr/src/app/node_modules
 volumes:
   node_modules:
   vol-mysql:
