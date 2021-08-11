@@ -13,6 +13,7 @@ COPY . .
 #COPY --chown=node:node . .
 
 #USER node
+RUN chmod +x ./docker-entrypoint.sh
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
 
