@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
   res.send({ message: "running" });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 888;
 server.listen(PORT, (req, res) => {
   console.log(`Server is runnig on port ${PORT}.`);
 });
