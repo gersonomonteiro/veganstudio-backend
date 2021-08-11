@@ -4,7 +4,7 @@
   "description": "Vegan studio project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "nodemon src/index.js"
   },
   "repository": {
@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/gersonomonteiro/veganstudio-backend#readme",
   "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mocha": "^9.0.3",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
     "sequelize": "^6.6.5",
