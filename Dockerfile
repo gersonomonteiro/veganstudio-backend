@@ -15,7 +15,7 @@ COPY . .
 #USER node
 
 ADD docker-entrypoint.sh /usr/src/app/
-RUN ["chmod", "+x", "/usr/src/app/docker-entrypoint.sh"]
+RUN chmod 755 /usr/src/app/docker-entrypoint.sh
 
 ENTRYPOINT ["/usr/src/app/docker-entrypoint.sh"] 
 
