@@ -14,10 +14,5 @@ COPY . .
 
 #USER node
 
-ADD docker-entrypoint.sh /usr/src/app/
-RUN chmod 755 /usr/src/app/docker-entrypoint.sh
-
-ENTRYPOINT ["/usr/src/app/docker-entrypoint.sh"] 
-
 EXPOSE 3000
 CMD [ "node", "index.js" ]

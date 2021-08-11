@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "hello"
+npx sequelize db:migrate
