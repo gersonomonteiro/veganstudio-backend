@@ -13,9 +13,11 @@ COPY . .
 #COPY --chown=node:node . .
 
 #USER node
-RUN chmod 777 ./docker-entrypoint.sh
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+ADD docker-entrypoint.sh /usr/src/app/
+RUN ["chmod", "+x", "/usr/src/app/docker-entrypoint.sh"]
+
+ENTRYPOINT ["/usr/src/app/docker-entrypoint.sh"] 
 
 EXPOSE 3000
 CMD [ "node", "index.js" ]
