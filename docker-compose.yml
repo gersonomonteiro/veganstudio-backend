@@ -7,7 +7,7 @@ services:
     container_name: vegan-studio-backend
     restart: always
     ports:
-      - 888:8080
+      - 888:888
     volumes:
       - ./veganstudio-backend:/usr/src/app/
       - node_modules:/usr/src/app/node_modules
