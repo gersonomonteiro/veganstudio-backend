@@ -14,5 +14,7 @@ COPY . .
 
 #USER node
 
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
 EXPOSE 3000
 CMD [ "node", "index.js" ]
