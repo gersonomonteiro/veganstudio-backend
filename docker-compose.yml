@@ -6,7 +6,6 @@ services:
     build: ./veganstudio-backend
     container_name: vegan-studio-backend
     restart: always
-    entrypoint: ["/bin/bash", "./docker-entrypoint.sh"]
     ports:
       - 888:888
     volumes:

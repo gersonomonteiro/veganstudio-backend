@@ -15,4 +15,5 @@ COPY . .
 #USER node
 
 EXPOSE 3000
+CMD [ "npx", "sequelize", "db:migrate" ]
 CMD [ "node", "index.js" ]
